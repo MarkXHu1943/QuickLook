@@ -19,7 +19,7 @@ using System.Collections.Generic;
 
 namespace QuickLook.Plugin.AppViewer.PackageParsers.Apk;
 
-public class ApkInfo
+public class ApkInfo : IApkInfo
 {
     public string VersionName { get; set; }
 
@@ -61,4 +61,6 @@ public class ApkInfo
     public List<string> Densities { get; set; } = [];
 
     public string LaunchableActivity { get; set; }
+
+    public string[] ABIs { get; set; } = [];
 }
